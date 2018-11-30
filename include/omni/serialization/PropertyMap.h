@@ -215,7 +215,7 @@ namespace omni {
         void fromStream(QDataStream&);
 
       private:
-        typedef std::map<QString, QByteArray>property_map;
+        typedef std::map<QString, QByteArray> property_map;
 
         /// Make MD5 checksum from byte array
         static QString makeChecksum(QByteArray const& _b);

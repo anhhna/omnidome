@@ -213,7 +213,7 @@ namespace omni {
         int _sizeY = std::max(int(size().y() + 1), 2);
         buffer_.resize(_sizeX, _sizeY);
 
-        float _r = 0.49;
+        float _r = 0.49f;
         float _innerRadius = _r - _r * feather();
 
 

@@ -29,12 +29,15 @@
 
 # Set default compiler flags for C and C++
 MACRO(omni_common_cxx_flags)
-  ADD_DEFINITIONS(-fPIC -fsigned-char -Wall -Wno-missing-braces)
+#  ADD_DEFINITIONS(-fPIC -fsigned-char -Wall -Wno-missing-braces)
+  ADD_DEFINITIONS(-Wall)
 
-  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+#  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
   IF(${CMAKE_BUILD_TYPE} MATCHES "Debug")
-    ADD_DEFINITIONS("-g -DDEBUG -O1")
+#    ADD_DEFINITIONS("-g -DDEBUG -O1")
+    ADD_DEFINITIONS("-DDEBUG")
   ENDIF(${CMAKE_BUILD_TYPE} MATCHES "Debug")
 
   IF(${CMAKE_BUILD_TYPE} MATCHES "Release")
